@@ -26,3 +26,9 @@ https://3proxy.ru/download/
 
 # Обновить GeoIP базы
 https://download.ip2location.com/lite/
+
+# Чекнуть айпи в РФ
+https://www.reg.ru/web-tools/myip
+
+# Чекнуть айпи забугром
+https://myip.wtf
