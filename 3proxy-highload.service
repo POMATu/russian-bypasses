@@ -1,0 +1,24 @@
+[Unit]
+Description=3proxy tiny proxy server
+Documentation=man:3proxy(1)
+After=networking.service
+Requires=networking.service
+#After=yggdrasil.service
+#Requires=yggdrasil.service
+
+[Service]
+Environment=CONFIGFILE=/etc/3proxy/3proxy.cfg
+ExecStart=/bin/3proxy ${CONFIGFILE}
+ExecReload=/bin/kill -SIGUSR1 $MAINPID
+KillMode=process
+Restart=always
+RestartSec=1s
+LimitNOFILE=65536
+LimitNPROC=32768
+LimitAS=infinity
+LimitRSS=infinity
+LimitCORE=infinity
+
+[Install]
+WantedBy=multi-user.target
+Alias=3proxy.service
