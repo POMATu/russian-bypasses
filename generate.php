@@ -32,7 +32,7 @@ $header = '#!/bin/3proxy
 #daemon
 #pidfile /var/run/3proxy.pid
 #chroot /usr/local/3proxy proxy proxy
-maxconn 65535
+maxconn 32768
 ';
 
 
